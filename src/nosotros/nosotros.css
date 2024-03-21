@@ -1,0 +1,330 @@
+/* contenedor principal del componente */
+
+.nosotros{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 7rem;
+    min-height: 100vh;
+    gap: 1rem;
+}
+
+/* tamaño del titulo y linea debajo */
+
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.title h2{
+    font-family: var(--font-family);
+    font-size: 7rem;
+    margin-right: 16rem;
+}
+
+.title .line{
+    max-width: 650px;
+}
+
+
+/* orientacion de imagenes y textos */
+
+.nosotros section{
+    display: flex;
+    flex-direction: row;
+    margin: 5rem;
+    justify-content: center;
+    gap: 5rem;
+}
+
+
+/* imagen del lado izquierdo */
+
+.nosotros img:first-child{
+    width: 800px;
+}
+
+.nosotros p{
+    font-size: 1.2rem;
+    padding-bottom:  1rem;
+    max-width: 300px;
+}
+
+/* textos en color naranja */
+
+.nosotros .naranja{
+    color: var(--color-naranja);
+}
+
+.nosotros span{
+    font-weight: 800;
+    color: var(--color-naranja);
+}
+.nosotros article{
+    display: flex;
+    flex-direction:  column;
+    align-items: start;
+    justify-content: flex-start;
+}
+
+.nosotros article div{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    margin-bottom: 1rem;
+}
+
+.nosotros article div p{
+    max-width: 320px;
+}
+
+/* imagen del lado derecho */
+
+.nosotros .bottom-right {
+    width: 300px;
+    margin-left: 7rem;
+}
+
+/* logos de marcas de los productos */
+
+.nosotros .marcas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 8rem;
+    
+}
+
+.nosotros .marcas img{
+    width: 100px;
+    margin: 0;
+}
+
+
+
+
+/* codigo adaptable a dispositivos mobiles */
+
+@media screen and (max-width: 1280px) {
+
+.title h2{
+    font-size: 6rem;
+}
+
+.title .line{
+    max-width: 593px;
+}
+
+/* orientacion de imagenes y textos */
+
+.nosotros section{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 2rem;
+    justify-content: space-between;
+}
+
+/* imagen del lado izquierdo */
+
+.nosotros img:first-child{
+    width: 60%;
+}
+
+.nosotros p{
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+    max-width: 350px;
+}
+
+.nosotros span{
+    font-weight: 700;
+}
+
+.nosotros article div{
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.nosotros article div p{
+    max-width: 250px;
+}
+
+/* imagen del lado derecho */
+
+.nosotros img:last-child {
+    width: 30%;
+    margin-left: 3rem;
+    margin-top: 2rem;
+}
+
+/* logos de marcas de los productos */
+
+.nosotros .marcas{
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.nosotros .marcas img{
+    width: 90px;
+    margin: 0;
+}
+
+}
+
+
+@media screen and (max-width: 1050px){
+
+    /* titulo de la seccion */
+
+    .title h2{
+        font-size: 5rem;
+        margin-right: 10rem;
+    }
+
+    /* linea debajo del titulo */
+    .title .line{
+        max-width: 440px;
+    }
+
+    /* parrafos */
+
+    .nosotros p{
+        max-width: 300px;
+    }
+
+    /* contenedor de logos */
+    .nosotros .marcas{
+        align-items: center;
+        margin-top: 3rem;
+    }
+    
+}
+
+@media screen and (max-width: 800px){
+
+
+    /* titulo de la seccion */
+    .title h2{
+        font-size: 4rem;
+        margin-right: 8rem;
+    }
+
+    /* linea debajo del titulo */
+
+    .title .line{
+        max-width: 355px;
+    }
+
+    /* contenedor de parrafos e imagen */
+
+    .nosotros section{
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    /* imagen en la parte superior de la seccion */
+    
+    .nosotros section .top-left{
+        width: 100%;
+    }
+
+    .nosotros section article p{
+        text-align: left;
+        max-width: 100%;
+        font-size: 1.1rem;
+    }
+
+    /* se oculta imagen en la parte derecha de la sección */
+
+    .nosotros section .bottom-right{
+        display: none;
+    }
+
+    /* tamaño del contenedor de logos*/
+
+    .nosotros .marcas{
+        width: 90%;
+    }
+
+    .nosotros .marcas img{
+        margin-top: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+
+
+    /* espacio entre cajas dentro del contenedor principal */
+
+    .nosotros{
+        gap: 0;
+    }
+
+    /* titulo de la sección */
+
+    .title h2{
+        font-size: 3rem;
+        margin-right: 6.5rem;
+    }
+
+    /* linea debajo del titulo */
+
+    .title .line{
+        max-width: 275px;
+    }
+
+
+    /* orientacion inversa del contenedor */
+
+    .nosotros section{
+        flex-direction: column-reverse;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    /* tamaño de imagen */
+
+    .nosotros section .top-left{
+        width: 100%;
+    }
+
+    /* limite de ancho de cada parrafo */
+
+    .nosotros p{
+        max-width: 200px;
+        font-size: 0.8rem;
+    }
+    
+    /* tamaño maximo del contenedor de parrafos superior */
+
+    .nosotros section article{
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .nosotros section article p{
+        text-align: left;
+        font-size: 0.9rem;
+    }
+
+    /* tamaño maximo del contenedor de parrafos inferior */
+
+    .nosotros section article div{
+        max-width: 100%
+    }
+
+    /* tamaño maximo del contenedor de logos */
+
+    .nosotros .marcas{
+        max-width: 100%;
+    }
+
+    /* tamaño de logos */
+    
+    .nosotros .marcas img{
+        width: 70px;
+    }
+}

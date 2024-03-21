@@ -1,0 +1,204 @@
+/* define medidas de contenedor principal del componente */
+
+.navegador{
+    width: 100%;
+    height: 100%;
+    height: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    background: transparent;
+}
+
+/* medida de contenedor y logo */
+
+.logo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin-left: 10rem;
+}
+
+.logo img{
+    width: 80px;
+}
+
+/* contenedor de links para navegar por las secciones de la pagina */
+
+nav{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+nav a {
+    font-family: var(--font-alt);
+    font-size: 1.3rem;
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+nav a:hover{
+    color: var(--color-naranja);
+}
+
+/* ocultar boton hamburguesa */
+
+.burguer{
+    display: none;
+}
+
+/* botones para la selección de idioma */
+
+.idiomas{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 0.3rem;
+    font-size: 1.2rem;
+}
+
+.idiomas a:first-child{
+    color: var(--color-naranja);
+}
+
+.idiomas a{
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* linea divisoria entre los botones */
+
+.idiomas span{
+    font-weight: 500;
+}
+
+.idiomas a:last-child:hover{
+    color: var(--color-naranja);
+}
+
+
+
+
+/* codigo adaptable para dispositivos mobiles */
+
+@media screen and (max-width: 1280px){
+
+    /* medida de contenedor y logo */
+
+    .logo{
+        margin-left: 5rem;
+    }
+
+    .logo img{
+        width: 75px;
+    }
+
+    /* contenedor de links para navegar por las secciones de la pagina */
+
+    nav{
+        gap: 3rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    /* botones para la selección de idioma */
+
+    .idiomas{
+        font-size: 0.9rem;
+    }
+
+}
+
+
+@media screen and (max-width: 1050px){
+
+/* espaciado entre links */
+
+    nav {
+        gap: 2rem;
+    }
+
+/* tamaño de fuente en los botones de idioma */
+
+    .idiomas {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+
+/* reduccion de columnas en el grid del componente*/
+
+    .navegador{
+        grid-template-columns: 1fr 1fr;
+        align-items: flex-start;
+        justify-items: flex-end;
+    }
+    
+    .logo{
+        padding: 0.5rem;
+    }
+
+
+    /* mostrar boton hamburguesa para navegador responsive*/
+
+    .burguer{
+        display: flex;
+        padding-top: 1.5rem ;
+        padding-right: 1rem;
+    }
+
+    /* se ocultan links del diseño destock */
+
+    .links {
+        display: none;
+    }
+  
+    /* links al desplegarse el navegador, al momento de hacer click en el botón */
+
+    .links.active{
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: right;
+        gap: 0.8rem;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        margin-top: 0.2rem;
+        background: var(--color-bg);
+        padding: 1rem;
+    }
+
+    .links.active a{
+        font-size: 1rem;
+    }
+
+    /* se ocultan botones de idiomas */
+    
+    .idiomas{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    .logo img{
+        width: 70px;
+    }
+
+    .links.active{
+        gap: 0.5rem;
+        top: 70px;
+    }
+}

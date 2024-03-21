@@ -1,0 +1,173 @@
+/* tamaño y orientacion del contenedor principal del componente */
+
+.footer{
+    min-height: 20vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--color-naranja);
+    align-items: center;
+    justify-content: center;
+    background: var(--color-naranja);
+}
+
+
+/* medida de caja contenedora del logo */
+
+.footer .logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* logo */
+
+.footer img{
+    width: 90px;
+}
+
+/* medida y orientacion de la caja contenedora de los links*/
+
+.footer nav{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   gap: 1.5rem;
+   margin: 1rem;
+}
+
+.footer nav div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+/* orientacion de links */
+
+.footer nav div a{
+    text-align: left;
+    font-family: var(--font-alt);
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.footer nav div a:hover{
+    color: var(--color-bg);
+}
+
+/* link a las politicas de privacidad */
+
+.footer .privacidad{
+    margin-left: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+/* codigo adaptable para dispositivos mobiles */
+
+@media screen and (max-width: 1385px){
+
+    /* medida caja contenedora del logo */
+
+    .footer div{
+        justify-content: center;
+    }
+
+    /* medida de caja contenedora de la politica de privacidad */
+
+    .footer .privacidad{
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 1050px){
+
+
+    /* orientacion de links */
+
+    .footer nav div a{
+        font-size: 1.1rem;
+        font-weight: 400;
+    }
+
+     /* medida caja contenedora del logo */
+
+     .footer div{
+        justify-content: flex-start;
+        margin-left: 1rem;
+    }
+
+    /* medida de caja contenedora de la politica de privacidad */
+
+    .footer .privacidad p{
+        max-width: 100px;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    /* logo */
+
+    .footer img{
+        width: 80px;
+    }
+    
+
+    .footer nav div a{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+
+    /* medida de caja contenedora de la politica de privacidad */
+
+    .footer .privacidad{
+        font-size: 0.9rem;
+        margin-right: 1rem;
+    }
+
+    
+
+}  
+
+
+@media screen and (max-width: 600px){
+
+
+    .footer .logo{
+        justify-content: flex-start;
+    }
+
+    /* medida y orientacion de la caja contenedora de los links*/
+
+    .footer nav{
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    
+    .footer nav div{
+        align-items: center;
+        gap: 0.3rem;
+    }
+
+    .footer nav div a{
+        font-size: 0.8rem;
+    }
+
+    .footer .privacidad p{
+        max-width: 100px;
+        font-size: 0.8rem;
+        padding-left: 0.5rem;
+    }
+}

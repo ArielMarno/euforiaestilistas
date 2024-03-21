@@ -1,0 +1,155 @@
+/* contenedor principal del componente */
+
+.ubicacion{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 7rem;
+    min-height: 100vh;
+}
+
+/* titulo de la sección y linea debajo*/
+
+.ubicacion .title{
+    align-items: flex-start;
+}
+
+.ubicacion .title h2{
+    width: 62%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.ubicacion .line{
+    max-width: 62%;
+}
+
+/* articulos y orden de cajas */
+
+.ubicacion section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+/* orientacion dentro del articulo, imagen y  texto */
+
+.ubicacion article{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 1rem;
+    justify-content: flex-end;
+    padding-bottom: 5rem;
+}
+
+.ubicacion article h4{
+    width: 100%;
+    font-family: var(--font-family);
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: var(--color-naranja);
+}
+
+.ubicacion article p{
+    font-size: 1.2rem;
+    font-weight: 400;
+    max-width: 350px;
+    padding-bottom: 0.5rem;
+}
+
+.ubicacion .izq {
+    max-width: 80%;
+}
+
+.ubicacion .izq img{
+    width: 100%;
+}
+
+.ubicacion .ctro{
+    max-width: 80%;
+}
+
+.ubicacion .ctro img{
+    width: 100%;
+}
+
+.ubicacion .der {
+    max-width: 80%;
+}
+.ubicacion .der img{
+    width: 100%;
+}
+
+
+
+
+/* codigo adaptable para dispositivos mobiles */
+
+@media screen and (max-width: 1050px){
+
+/* se disminuyen los tamaños de las fuentes*/
+
+    .ubicacion article{
+        padding-bottom: 12rem;
+    }
+
+    .ubicacion article h4{
+        font-size: 1.5rem;
+    }
+
+    .ubicacion article p{
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+
+    /* titulo y linea debajo */
+
+    .ubicacion .title h2{
+        width: 80%;
+    }
+    
+    .ubicacion .line{
+        max-width: 80%;
+    }
+
+    /* se modifica cantidad de columnas de 3 a 1 */
+
+    .ubicacion section{
+        grid-template-columns: 1fr;
+    }
+
+    /* margen inferior de cada servicio */
+
+    .ubicacion article{
+        padding-bottom: 5rem;
+    }
+
+    .ubicacion .izq {
+        max-width: 90%;
+    }
+
+    .ubicacion .ctro{
+        max-width: 90%;
+    }
+
+    .ubicacion .der {
+        max-width: 90%;
+    }
+
+    /* subtitulo y parrafo */
+    
+    .ubicacion article h4{
+        font-size: 1.8rem;
+    }
+    
+    .ubicacion article p{
+        font-size: 1.2rem;
+        font-weight: 400;
+        max-width: 100%;
+    }
+}

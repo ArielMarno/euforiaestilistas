@@ -1,0 +1,198 @@
+/* contenedor principal del componente */
+
+.servicios{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+    margin-top: 12rem;
+}
+
+/* orientacion de contenedor de los servicios */
+
+.servicios section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 6rem 1rem;
+    gap: 8rem;
+}
+
+/* orientacion de los servicios */
+
+.servicios section article{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+}
+
+/* orientacion de contenedor de titulo, texto y boton  en el articulo */
+
+.servicios article div{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* titulo del servicio, texto y boton */
+
+.servicios h3{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--color-naranja);
+    max-width: 250px;
+}
+
+.servicios p{
+    font-size: 1.2rem;
+    max-width: 250px;
+}
+
+.servicios section article .btn{
+    font-size: 1.2rem;
+    padding: 0.8rem 0.9rem;
+}
+
+/* sentido opuesto a los articulos superior e inferior */
+
+.servicios .coloracion div{
+    align-items: flex-end;
+    text-align: right;
+}
+
+/* orientacion de titulo, texto y boton dentro de su contenedor */
+
+.servicios .peluqueria div, .servicios .maquillaje div{
+    align-items: flex-start;
+    text-align: left;
+}
+
+
+
+/* tamaño de imagenes dentro de los articulos */
+
+.servicios section article img{
+    width: 50%;
+    height: 90%;
+}
+
+
+
+/* codigo adaptable para dispositivos mobiles */
+
+@media screen and (max-width: 1385px){
+
+    .servicios h3{
+        font-size: 1.5rem;
+        max-width: 300px;
+    }
+    
+    .servicios p{
+        font-size: 1.1rem;
+        max-width: 250px;
+        line-height: 25px;
+    }
+    
+    .servicios section article .btn{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1050px){
+
+/* espaciado entre titulo, texto y boton en los servicios */
+
+    .servicios article div{
+        gap: 1rem;
+    }
+
+    .servicios h3{
+        font-size: 1.3rem;
+
+    }
+
+    .servicios p{
+        font-size: 1rem;
+    }
+
+/* orientacion de contenedor de los servicios */
+
+    .servicios section{
+        margin: 6rem 0.5rem;
+        gap: 6rem;
+    }
+
+/* orientacion de los servicios */
+
+    .servicios section article{
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .servicios section article .btn{
+        font-size: 1rem;
+        padding: 0.7rem 0.9rem;
+    }
+
+/* tamaño de imagenes dentro de los articulos */
+
+    .servicios section article img{
+        width: 50%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .servicios section{
+        margin: 1rem
+    }
+
+    /* orientacion de los servicios */
+
+    .servicios section article{
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .servicios h3{
+        font-size: 1.7rem;
+        max-width: 100%;
+    }
+
+    .servicios p{
+        font-size: 1.2rem;
+        max-width: 100%;
+    }
+
+    .servicios article div{
+        gap: 1rem;
+    }
+
+    /* tamaño de imagenes dentro de los articulos */
+
+    .servicios section article img{
+        width: 100%;
+        height: 90%;
+    }
+    /* orientacion inversa de elementos dentro del servicio coloracion */
+
+    .servicios section .coloracion{
+        flex-direction: column-reverse;
+    }
+
+    .servicios .coloracion div{
+        align-items: flex-end;
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .servicios p{
+        max-width: 320px;
+    }
+}

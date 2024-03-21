@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+
+/* Variables con fuentes */
+
+--font-family: "Oswald", sans-serif;
+--font-alt: "Montserrat", sans-serif;
+
+/* Variables con colores */
+
+--color-txt: #F8F8F8;
+--color-naranja: #EF8451;
+--color-bg: #1D1D1D;
+--color-marron: #8f593e;
+
+/* botones */
+
+.btn{
+    text-decoration: none;
+    background: transparent;
+    border: 2px solid var(--color-naranja);
+    border-radius: 50px;
+    color: var(--color-txt);
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0.9rem 1.1rem;
+    max-width: 220px;
+    text-align: center;
+}
+
+.btn:hover{
+    transition: all ease-in-out .3s;
+    background: var(--color-naranja);
+    cursor: pointer;
+}
+
+
+.line {
+    height: 1px;
+    width: 100%;
+    background: var(--color-txt);
+    margin: 2rem 0;
+    padding: 0;
+}
+
+}
+
+

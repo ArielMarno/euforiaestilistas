@@ -1,0 +1,141 @@
+/* contenedor principal del componente */
+
+.contacto{
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 70vh;
+}
+
+/* titulo de la seccion */
+
+.contacto .title{
+    align-items: flex-start;
+}
+
+.contacto .title h2{
+    width: 61%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.contacto .line{
+    max-width: 61%;
+}
+
+/* orientacion del contenedor de textos y botones */
+
+.contacto section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+/* ancho maximo del parrafo y tamaño de la fuente*/
+
+.contacto section p{
+    max-width: 500px;
+    font-size: 1.3rem;
+}
+
+/* paralabras en color naranja */
+
+.contacto section p span{
+    color: var(--color-naranja);
+}
+
+.contacto section div a{
+    margin: 0.5rem;
+}
+
+/* botones de whatsapp e instagram */
+
+.btn-contacto{
+    text-decoration: none;
+    background: transparent;
+    border: 2px solid var(--color-txt);
+    border-radius: 50px;
+    color: var(--color-naranja);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    margin: 1rem;
+    max-width: 220px;
+    text-align: center;
+}
+
+.btn-contacto:hover{
+    transition: all ease-in-out .3s;
+    background: var(--color-naranja);
+    color: var(--color-txt);
+    cursor: pointer;
+}
+
+/* codigo adaptable para dispositivos mobiles */
+
+@media screen and (max-width: 1050px){
+
+
+    /* ancho maximo y tamaño de parrafo */
+    .contacto section p{
+        font-size: 1.2rem;
+        margin-left: 1rem;
+        max-width: 400px;
+    }
+
+    /* tamaño de botones */
+
+    .btn-contacto{
+        font-size: 1.1rem;
+        padding: 0.8rem 1.3rem;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    /* titulo y linea debajo */
+
+    .contacto .title h2{
+        width: 80%;
+    }
+    
+    .contacto .line{
+        max-width: 80%;
+    }
+
+    /* tamaño orientacion del contenedor principal */
+
+    .contacto{
+        margin: 5rem 0;
+        align-items: center;
+        min-height: 50vh;
+    }
+
+    /* cambio de orientacion en el contenedor del parrafo y los botones */
+
+    .contacto section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        padding: 1rem;
+    }
+
+    .contacto section p{
+        margin-left: 0;
+    }
+    
+}
+
+@media screen and (max-width: 600px){
+
+    /* tamaño del parrafo */
+    .contacto section p{
+        font-size: 1rem;
+        line-height: 27px;
+        max-width: 500px;
+    }
+}

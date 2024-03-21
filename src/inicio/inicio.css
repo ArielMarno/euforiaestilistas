@@ -1,0 +1,149 @@
+/* contenedor principal del componente*/
+
+.inicio{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    background-image: url("../assets/inicio/portada.png");
+    background-position: center;
+    background-size: cover;
+    padding-top: 3rem ;
+}
+
+.inicio div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* titulo de la pagina */
+
+.inicio div h1{
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 10rem;
+    letter-spacing: 1px;
+    line-height: 160px;
+
+}
+
+/* subtitulo */
+
+.inicio div h4{
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--color-naranja);
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+/* linea debajo del subtitulo */
+
+.inicio div .line{
+    max-width: 800px;
+}
+
+
+
+@media screen and (max-width: 1280px){
+
+
+    /* se cambia tamaño de fuentes y linea debajo */
+
+    .inicio div h1{
+        font-size: 8rem;
+        line-height: 120px;
+    }
+
+    .inicio div h4{
+        font-size: 2.5rem;
+    }
+
+    .inicio div .line{
+        max-width: 700px;
+    }
+
+    
+}
+
+@media screen and (max-width: 1050px){
+
+    /* se cambia tamaño de fuentes y linea debajo */
+
+    .inicio div h1{
+        font-size: 6.5rem;
+        line-height: 110px;
+    }
+
+    .inicio div h4{
+        font-size: 2rem;
+    }
+
+    .inicio div .line{
+        max-width: 500px;
+    }
+
+    /* tamaño del boton contactarnos */
+
+    .inicio div .btn{
+        max-width: 180px;
+        font-size: 1.2rem;
+    }
+   
+}
+
+
+@media screen and (max-width: 800px){
+
+
+     /* se cambia tamaño de fuentes y linea debajo */
+
+    .inicio div h1{
+        font-size: 4.5rem;
+        line-height: 100px;
+    }
+
+    .inicio div h4{
+        font-size: 1.7rem;
+        max-width: 300px;
+    }
+
+    .inicio div .line{
+        max-width: 450px;
+    }
+
+    /* tamaño del boton contactarnos */
+
+    .inicio div .btn{
+        font-size: 1.3rem;
+        max-width: 210px;
+    }
+
+}
+
+
+@media screen and (max-width: 600px){
+
+    .inicio div{
+        padding: 1rem;
+    }
+
+    .inicio div h1{
+        font-size: 4rem;
+        line-height: 80px;
+        max-width: 400px;
+    }
+
+    .inicio div .btn{
+        font-size: 1.2rem;
+    }
+
+    .inicio div .line{
+        max-width: 400px;
+    }
+
+}
